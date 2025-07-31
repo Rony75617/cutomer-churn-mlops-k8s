@@ -24,8 +24,8 @@ jobs:
           
 
       - name: Run tests
-        run: |
-          uv run -- PYTHONPATH=. pytest
+        run: bash -c "PYTHONPATH=. pytest"
+
 
       - name: Check DVC reproducibility
         run: |
