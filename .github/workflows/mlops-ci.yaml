@@ -22,13 +22,8 @@ jobs:
           source .venv/bin/activate
           uv pip install .
           uv pip install pytest
-          
-
-      - name: Run tests
-        run: |
           export PYTHONPATH=.
           pytest
-
 
       - name: Check DVC reproducibility
         run: |
