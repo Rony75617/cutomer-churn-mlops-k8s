@@ -1,0 +1,11 @@
+preprocess:
+  input: data/WA_Fn-UseC_-Telco-Customer-Churn.csv
+  output: processed/cleaned_telco.csv
+
+train:
+  data: processed/cleaned_telco.csv
+  model_path: model/model.pkl
+  test_size: 0.2
+  random_state: 42
+  max_depth: 5
+  n_estimators: 100

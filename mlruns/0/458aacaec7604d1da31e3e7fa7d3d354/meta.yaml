@@ -1,0 +1,14 @@
+artifact_uri: file:///E:/Python_workspace3_2024/customerchurn/cutomer-churn-mlops-k8s/mlruns/0/458aacaec7604d1da31e3e7fa7d3d354/artifacts
+end_time: 1753861280202
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 458aacaec7604d1da31e3e7fa7d3d354
+run_name: secretive-hare-19
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753861274426
+status: 3
+tags: []
+user_id: singh

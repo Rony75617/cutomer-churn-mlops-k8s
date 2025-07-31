@@ -1,0 +1,14 @@
+artifact_uri: file:///E:/Python_workspace3_2024/customerchurn/cutomer-churn-mlops-k8s/mlruns/0/832a510d056346a09564ed95fa3b7947/artifacts
+end_time: 1753861350882
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 832a510d056346a09564ed95fa3b7947
+run_name: bouncy-stoat-668
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753861346196
+status: 3
+tags: []
+user_id: singh

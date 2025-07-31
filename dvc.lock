@@ -1,0 +1,45 @@
+schema: '2.0'
+stages:
+  preprocess_data:
+    cmd: python notebooks/preprocessing.py --input 
+      data/WA_Fn-UseC_-Telco-Customer-Churn.csv --output 
+      processed/cleaned_telco.csv
+    deps:
+    - path: data/WA_Fn-UseC_-Telco-Customer-Churn.csv
+      hash: md5
+      md5: 0f9de68e012bd3aed5fa7cdc9fc421af
+      size: 977501
+    - path: notebooks/preprocessing.py
+      hash: md5
+      md5: b3908b0a54d34341cb240ba1e381fced
+      size: 3280
+    outs:
+    - path: processed/cleaned_telco.csv
+      hash: md5
+      md5: b9d04a4078fffacfc9af107d2bfd2076
+      size: 1644719
+  train_model:
+    cmd: python app/train.py
+    deps:
+    - path: app/train.py
+      hash: md5
+      md5: 4ba860a472d94e0b2bb1f0c8f50d89f6
+      size: 1663
+    - path: processed/cleaned_telco.csv
+      hash: md5
+      md5: b9d04a4078fffacfc9af107d2bfd2076
+      size: 1644719
+    params:
+      params.yaml:
+        train.max_depth: 5
+        train.n_estimators: 100
+        train.test_size: 0.2
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: 491562780a8de2cc3cb120a764fcfa1d
+      size: 72
+    - path: model/model.pkl
+      hash: md5
+      md5: 41a08a4d21f42401ca4e0ad5cefdeaba
+      size: 529481

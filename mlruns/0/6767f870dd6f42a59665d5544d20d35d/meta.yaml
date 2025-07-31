@@ -1,0 +1,14 @@
+artifact_uri: file:///E:/Python_workspace3_2024/customerchurn/cutomer-churn-mlops-k8s/mlruns/0/6767f870dd6f42a59665d5544d20d35d/artifacts
+end_time: 1753861355752
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6767f870dd6f42a59665d5544d20d35d
+run_name: clumsy-moth-823
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753861351012
+status: 3
+tags: []
+user_id: singh

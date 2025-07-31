@@ -1,0 +1,10 @@
+artifact_location: file:///E:/Python_workspace3_2024/customerchurn/cutomer-churn-mlops-k8s/mlruns/0/models/m-17189d7430cc438684510f596900fa3b/artifacts
+creation_timestamp: 1753861052797
+experiment_id: '0'
+last_updated_timestamp: 1753861058230
+model_id: m-17189d7430cc438684510f596900fa3b
+model_type: null
+name: model
+source_run_id: 16fa3a0627444c32af73d12ee13f5e0e
+status: 2
+status_message: null

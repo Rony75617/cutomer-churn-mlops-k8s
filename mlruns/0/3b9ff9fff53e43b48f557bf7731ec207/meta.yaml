@@ -1,0 +1,14 @@
+artifact_uri: file:///E:/Python_workspace3_2024/customerchurn/cutomer-churn-mlops-k8s/mlruns/0/3b9ff9fff53e43b48f557bf7731ec207/artifacts
+end_time: 1753860973535
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3b9ff9fff53e43b48f557bf7731ec207
+run_name: inquisitive-bee-44
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753860967932
+status: 3
+tags: []
+user_id: singh
