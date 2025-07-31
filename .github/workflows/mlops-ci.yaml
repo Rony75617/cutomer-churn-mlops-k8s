@@ -20,12 +20,12 @@ jobs:
           python -m pip install uv
           uv venv
           source .venv/bin/activate
-          uv pip install  pyproject.toml
+          uv pip install  -e .
           
 
       - name: Run tests
         run: |
-          PYTHONPATH=. pytest
+          uv run -- PYTHONPATH=. pytest
 
       - name: Check DVC reproducibility
         run: |
