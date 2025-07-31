@@ -15,18 +15,33 @@ jobs:
         with:
           python-version: '3.13'
 
+      - name: Cache virtualenv
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: ${{ runner.os }}-venv-${{ hashFiles('pyproject.toml', 'uv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-venv-    
+
       - name: Install dependencies
         run: |
           python -m pip install uv
           uv venv
           source .venv/bin/activate
           uv pip install .
-          uv pip install pytest
-          export PYTHONPATH=.
-          pytest
+          echo "$GITHUB_WORKSPACE/.venv/bin" >> $GITHUB_PATH
+
 
       - name: Check DVC reproducibility
         run: |
-          dvc repro
+          dvc repro    
+
+      - name: Run tests
+        run: |
+          export PYTHONPATH=.
+          pytest
+
+
+      
 
 

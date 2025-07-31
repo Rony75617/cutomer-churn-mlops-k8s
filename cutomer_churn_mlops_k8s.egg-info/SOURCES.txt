@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+app/__init__.py
+app/train.py
+cutomer_churn_mlops_k8s.egg-info/PKG-INFO
+cutomer_churn_mlops_k8s.egg-info/SOURCES.txt
+cutomer_churn_mlops_k8s.egg-info/dependency_links.txt
+cutomer_churn_mlops_k8s.egg-info/requires.txt
+cutomer_churn_mlops_k8s.egg-info/top_level.txt
+notebooks/__init__.py
+notebooks/preprocessing.py
+tests/test_preprocess.py
+tests/test_train.py
