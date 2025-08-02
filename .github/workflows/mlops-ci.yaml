@@ -39,7 +39,7 @@ jobs:
         run: |
           source .venv/bin/activate
           dvc remote add -d -f gcs gs://durga_dvc/telco_churn_data
-          dvc remote modify gcs credentialsfile gcp-creds.json  
+          dvc remote modify gcs credentialpath gcp-creds.json  
 
       - name: Pull tracked data from DVC
         run: |
