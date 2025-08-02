@@ -1,0 +1,9 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = gs://durga_dvc/telco_churn_data
+    credentialpath = C:\\Users\\singh\\Downloads\\dvc_key_2.json
+['remote "gdrive_remote"']
+    url = gdrive://1FW1PtVii2JAiNGiMdneD0T9MccBJ7FgJ
+    gdrive_use_service_account = true
+    gdrive_service_account_json_file_path = C:\\Users\\singh\\Downloads\\dvc_key.json
