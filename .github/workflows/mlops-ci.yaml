@@ -38,8 +38,8 @@ jobs:
       - name: Configure DVC remote with GCS
         run: |
           source .venv/bin/activate
-          dvc remote add -d gcs gs://durga_dvc/telco_churn_data
-          dvc remote modify gcs gcloud_credentials_file gcp-creds.json  
+          dvc remote add -d -f gcs gs://durga_dvc/telco_churn_data
+          dvc remote modify gcs credentialsfile gcp-creds.json  
 
       - name: Pull tracked data from DVC
         run: |
