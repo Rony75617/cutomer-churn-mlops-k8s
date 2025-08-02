@@ -31,7 +31,22 @@ jobs:
           uv pip install .
           echo "$GITHUB_WORKSPACE/.venv/bin" >> $GITHUB_PATH
 
+      - name: Write GCP credentials from secret
+        run: |
+          echo "${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}" > gcp-creds.json
 
+      - name: Configure DVC remote with GCS
+        run: |
+          source .venv/bin/activate
+          dvc remote modify gcs remote gdrive
+          dvc remote modify gcs gcloud_credentials_file gcp-creds.json
+          dvc remote default gcs  
+
+      - name: Pull tracked data from DVC
+        run: |
+          source .venv/bin/activate
+          dvc pull
+          
       - name: Check DVC reproducibility
         run: |
           dvc repro    
