@@ -33,7 +33,7 @@ jobs:
 
       - name: Write GCP credentials from secret
         run: |
-          echo "${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}" > gcp-creds.json
+          echo "${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}" | base64 --decode > gcp-creds.json
 
       - name: Configure DVC remote with GCS
         run: |
