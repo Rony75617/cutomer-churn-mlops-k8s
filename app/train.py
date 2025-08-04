@@ -34,8 +34,8 @@ def train_model(train_cfg):
     )
 
 # MLflow tracking
-    os.makedirs("/tmp/mlruns", exist_ok=True)
-    mlflow.set_tracking_uri("/tmp/mlruns")
+    #os.makedirs("/tmp/mlruns", exist_ok=True)
+    mlflow.set_tracking_uri("/mlruns")
     
     with mlflow.start_run():
         clf = RandomForestClassifier(
