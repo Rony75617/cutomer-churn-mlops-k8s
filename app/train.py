@@ -34,6 +34,9 @@ def train_model(train_cfg):
     )
 
 # MLflow tracking
+    os.makedirs("/tmp/mlruns", exist_ok=True)
+    mlflow.set_tracking_uri("file:///tmp/mlruns")
+    
     with mlflow.start_run():
         clf = RandomForestClassifier(
             max_depth=train_cfg["max_depth"],
